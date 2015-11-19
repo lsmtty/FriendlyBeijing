@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	>
+
+    <RadioGroup
+        android:background="@android:color/darker_gray"
+        android:id="@+id/rg_navigator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" 
+        android:orientation="horizontal"
+        android:checkedButton="0"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_main_page"
+            style="@style/MyRadioButton"
+            android:drawableTop="@drawable/rb_main_page_selector"
+            android:text="@string/main_page" >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_news_center"
+            style="@style/MyRadioButton"
+            android:drawableTop="@drawable/rb_news_center"
+            android:text="@string/news_center" >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_wise_server"
+            style="@style/MyRadioButton"
+            android:drawableTop="@drawable/rb_wise_server"
+            android:text="@string/wise_server" >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_govaffairs"
+            style="@style/MyRadioButton"
+            android:drawableTop="@drawable/rb_govaffairs"
+            android:text="@string/govaffairs" >
+        </RadioButton>
+        
+        <RadioButton
+            android:id="@+id/rb_setting"
+            style="@style/MyRadioButton"
+            android:drawableTop="@drawable/rb_setting"
+            android:text="@string/setting" >
+        </RadioButton>
+    </RadioGroup>
+
+</RelativeLayout>

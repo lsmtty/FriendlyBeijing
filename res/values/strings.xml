@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FriendlyBeijing</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="startenjoy">开始体验</string>
+    <string name="main_page">首页</string>
+    <string name="news_center">新闻中心</string>
+    <string name="wise_server">智慧服务</string>
+    <string name="setting">设置</string>
+    <string name="govaffairs">政务</string>
+
+</resources>

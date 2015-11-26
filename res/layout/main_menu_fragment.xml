@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-	>
+    android:background="#fff"
+    android:layout_height="match_parent" >
+
+    <com.example.friendlybeijing.viewpager.NoScrollViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true" />
 
     <RadioGroup
-        android:background="@android:color/darker_gray"
         android:id="@+id/rg_navigator"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" 
-        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/darker_gray"
         android:checkedButton="0"
-        >
+        android:orientation="horizontal" >
 
         <RadioButton
             android:id="@+id/rb_main_page"
@@ -41,7 +46,7 @@
             android:drawableTop="@drawable/rb_govaffairs"
             android:text="@string/govaffairs" >
         </RadioButton>
-        
+
         <RadioButton
             android:id="@+id/rb_setting"
             style="@style/MyRadioButton"

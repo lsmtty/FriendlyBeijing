@@ -1,10 +1,9 @@
-package com.example.friendlybeijing;
+package com.example.friendlybeijing.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.SystemClock;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -12,6 +11,9 @@ import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.FrameLayout;
+
+import com.example.friendlybeijing.R;
+import com.example.friendlybeijing.Utils.SharedPreferencesUtils;
 
 public class Splash extends Activity {
 
@@ -77,17 +79,17 @@ public class Splash extends Activity {
 	}
 	private void jumptoNext() {
 		// TODO Auto-generated method stub
-		/*if (SharedPreferencesUtils.getBoolean("config", Splash.this,
+		if (SharedPreferencesUtils.getBoolean("config", Splash.this,
 				"first_enter", true)) {
 			SharedPreferencesUtils.setBoolean("config", Splash.this,
 					"first_enter", false);
 			// 进入新手引导页
 			startActivity(new Intent(Splash.this, NewUserActivity.class));
+			
 		} else {
 			// 进入主页面
 			startActivity(new Intent(Splash.this, MainActivity.class));
-		}*/
-		startActivity(new Intent(Splash.this, NewUserActivity.class));
+		}
 		overridePendingTransition(R.anim.right_in, R.anim.right_out);
 		finish();
 	}

@@ -1,4 +1,4 @@
-package fragment;
+package com.example.friendlybeijing.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -33,7 +33,7 @@ public abstract class MyBaseFragment extends Fragment {
 	/**
 	 * 不需要一定被继承的创建数据的函数
 	 */
-	private void initData() {
+	protected void initData() {
 		// TODO Auto-generated method stub
 		
 	}

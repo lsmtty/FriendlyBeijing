@@ -1,30 +1,24 @@
-package com.example.friendlybeijing;
+package com.example.friendlybeijing.activity;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import android.R.integer;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.util.Log;
-import android.view.DragEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnDragListener;
-import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.RelativeLayout;
+
+import com.example.friendlybeijing.R;
 
 public class NewUserActivity extends Activity {
 	private ViewPager viewPager;
@@ -91,11 +85,11 @@ public class NewUserActivity extends Activity {
 				//positionOffset 是 0-1的百分比
 				//positionOffsetPixels是滑动的像素值
 				//为满足屏幕适配，应选择百分比
-				Log.i("offset", "offset:"+positionOffset);
+				//Log.i("offset", "offset:"+positionOffset);
 				float startX = redX + position*dx;    
 				 //***这里出现过不好理解的错误，如果直接拿redX当作移动的初始位置，如果position不是 0 ，则每次都会加一个position*dx,所以出先距离指数型增大
 				circle_red.setX((int)(startX+dx*positionOffset));
-				Log.i("redX", ""+circle_red.getX());
+				//Log.i("redX", ""+circle_red.getX());
 			}
 			
 			@Override
@@ -148,7 +142,7 @@ public class NewUserActivity extends Activity {
 			RelativeLayout rt = (RelativeLayout) RelativeLayout.inflate(
 					NewUserActivity.this, R.layout.viewpager_item, null);
 			rt.setTag(position);
-			Log.i("message", "createPostion:"+position);
+			//Log.i("message", "createPostion:"+position);
 			rt.setBackgroundResource(pages.get(position % pages.size()));
 			container.addView(rt);
 			return rt;
@@ -157,7 +151,7 @@ public class NewUserActivity extends Activity {
 		@Override
 		public void destroyItem(ViewGroup container, int position, Object object) {
 			// TODO Auto-generated method stub
-			Log.i("message", "removePostion:"+position);
+			//Log.i("message", "removePostion:"+position);
 			container.removeView((RelativeLayout) object);
 		}
 	}

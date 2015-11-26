@@ -1,4 +1,4 @@
-package com.example.friendlybeijing;
+package com.example.friendlybeijing.Utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
